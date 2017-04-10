@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1744"
+    tools:context="com.android.kamrulhasan.tictactoe.MainActivity">
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="cursive"
+            android:text="Welcome"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/secondText"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="To"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_below="@id/secondText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo" />
+
+        <Button
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_bg"
+            android:onClick="play"
+            android:text="Let's Play"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:backgroundTint="#304FFE"
+        android:padding="30dp"
+        android:background="@drawable/button_bg"
+        android:id="@+id/userInformation"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:maxLines="1"
+            android:maxLength="6"
+            android:id="@+id/firstPlayer"
+            android:hint="first player name"
+            android:ems="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:maxLines="1"
+            android:maxLength="6"
+            android:id="@+id/secondPlayer"
+            android:layout_marginTop="6dp"
+            android:hint="second player name"
+            android:layout_below="@+id/firstPlayer"
+            android:ems="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/goButton"
+            android:onClick="go"
+            android:text="Go"
+            android:textAllCaps="false"
+            android:layout_below="@+id/secondPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
